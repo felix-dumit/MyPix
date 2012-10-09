@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+ <title>MyPIX - My Pictures</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  
+    <script type="text/javascript" src="js/pholder.js"></script>
+  <script type="text/javascript" src="js/reg_check.js"></script>
+  <script type="text/javascript" src="js/jquery-1.8.1.js"></script>
+  <script type="text/javascript" src="js/lightbox.js"></script>
+		
+</head>
+
+
+
+<body>	
+  <div id="main">
+    <header id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">My<span class="logo_colour">Pix</span></a></h1>
+          <h2> Image Uploading and Sharing</h2>
+        </div> 	
+      </div>
+      <nav id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+		  <li class="selected"><a href="mypage.html">MyPage</a></li>
+		  <li><a href="upload.html">Upload</a></li>
+          <li><a href="register.html">Register</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <div id="content_header"></div>
+    <section id="site_content">
+       <div id="sidebar_container">
+	 
+	 <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>My Links</h3>
+            <ul>
+              <li><a href="login.html">Login</a></li>
+				<li><a href="myprofile.html">My Profile</a></li>
+              <li><a href="mypictures.html">My Pictures</a></li>
+              <li><a href="upload.html">Upload</a></li>
+              <li><a href="#" onclick="alert('Logout succesfull');window.location='index.html';">Logout</a></li>            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        
+		<div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Search</h3>
+            <form method="post" action="#" id="search_form">
+              <p>
+                <input class="search" type="text" name="search_field" placeholder="Enter keywords....." />
+                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="img/search.png" alt="Search" title="Search" />
+              </p>
+            </form>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      
+		<div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>Latest News</h3>
+            <h4>CITS4230 - Project 1</h4>
+            <h5>September 14th, 2012</h5>
+            <p>First part of project released,<br /><a href="references.html">see references</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>          
+		
+	
+      </div>
+
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>My Pictures</h1>  
+		<h6>Drag images between tags, or move to trash. Click for slideshow</h6>
+		
+		
+		<div id="imgwrap">
+		<div class="imgblock" id="Foodblock" >
+			<h2>Winter<span> -</span></h2>
+			<ul class="imglist">
+				<li>
+					<a href="img/user/image-1.jpg" class="lightbox[Winter]">
+					<img id="img1" alt="image" draggable="true"  width="150"  src="img/user/image-1.jpg" /></a>		
+				</li>
+				<li>
+					<a href="img/user/image-2.jpg" class="lightbox[Winter]">
+					<img id="img2" alt="image" draggable="true"  width="150" src="img/user/image-2.jpg" /></a>		
+				</li>			
+			</ul>
+			<hr />
+		</div>		
+		<div class="imgblock" id="Placesblock">
+			<h2>2011<span> -</span></h2>
+			<ul class="imglist">
+				<li>
+					<a href="img/user/image-3.jpg" class="lightbox[2011]">
+					<img id="img3" alt="image" draggable="true" width="150" src="img/user/image-3.jpg" /></a>		
+				</li>
+				<li>
+					<a href="img/user/image-4.jpg" class="lightbox[2011]">
+					<img id="img4" alt="image" draggable="true" width="150" src="img/user/image-4.jpg" /></a>		
+				</li>
+				<li>
+					<a href="img/user/image-5.jpg" class="lightbox[2011]">
+					<img id="img5" alt="image" draggable="true" width="150" src="img/user/image-5.jpg" /></a>		
+				</li>
+				<li>
+					<a href="img/user/image-6.jpg" class="lightbox[2011]">
+					<img id="img6" alt="image" draggable="true" width="150" src="img/user/image-6.jpg" /></a>		
+				</li>				
+			</ul>
+			<hr />
+		</div>
+		</div>
+
+		<input type="button" id="buttonnewcat" onclick="createImageBlock()" value="New Group" style="margin:10px;padding:5px"/>
+		
+      </div>
+    </section>
+    <div id="content_footer"></div>
+    <footer id="footer">
+      
+      <p>Copyright &copy; Felix Dumit - 21203542 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a></p>
+    </footer>
+  </div>
+  
+ <script type="text/javascript" src="js/mypix.js"></script>
+	
+</body>
+</html>

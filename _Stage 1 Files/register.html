@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+ <title>MyPIX - Register</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/pholder.js"></script>
+  <script type="text/javascript" src="js/reg_check.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">My<span class="logo_colour">Pix</span></a></h1>
+          <h2> Image Uploading and Sharing</h2>
+        </div>
+      </div>
+      <nav id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mypage.html">MyPage</a></li>
+		  <li><a href="upload.html">Upload</a></li>
+          <li class="selected"><a href="register.html">Register</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <div id="content_header"></div>
+    <section id="site_content">
+      <div id="sidebar_container">
+	 
+	 <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>My Links</h3>
+            <ul>
+              <li><a href="login.html">Login</a></li>
+			<li><a href="myprofile.html">My Profile</a></li>
+              <li><a href="mypictures.html">My Pictures</a></li>
+              <li><a href="upload.html">Upload</a></li>
+              <li><a href="#" onclick="alert('Logout succesfull');window.location='index.html'; window.location='index.html';">Logout</a></li>            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        
+		<div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Search</h3>
+            <form method="post" action="#" id="search_form">
+              <p>
+                <input class="search" type="text" name="search_field" placeholder="Enter keywords....." />
+                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="img/search.png" alt="Search" title="Search" />
+              </p>
+            </form>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      
+		<div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>Latest News</h3>
+            <h4>CITS4230 - Project 1</h4>
+            <h5>September 14th, 2012</h5>
+            <p>First part of project released,<br /><a href="references.html">see references</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>     
+        
+		
+		
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Register</h1>
+		
+		<h5>Already registered? <a href="login.html">Login instead</a></h5>
+		
+      
+		<form action="index.html" method="POST">
+          <div class="form_settings">
+            <p><span>Name:</span>
+				<input type="text" id="reg_name" value="" required placeholder="Enter your Full Name" />
+			</p>
+			<p><span>Date of Birth:</span>
+				<input type="text" id="reg_dob" value="" required placeholder="dd/mm/yyyy" oninput="checkDate();" />
+				</p>
+            <p><span>Email Address:</span>
+				<input type="email" id="reg_email" required placeholder="email@domain.com" title="your email" />
+			</p>
+			<p><span>Password:</span>
+				<input type="password" id="reg_pw" value="" required placeholder="At least 6 characters" pattern="\S{6,}" />
+			</p>
+            <p><span>Confirm Password:</span>
+				<input type="password" id="reg_pw2" value="" required placeholder="Re-type Password" oninput="checkPasswords();" />
+			</p>
+			
+			<input style="visibility:hidden" id="txtCaptcha"/>
+			
+			<p><span id="txtCaptchaDiv"></span>
+				<input type="text" id="txtInput" oninput="checkCaptcha();" required placeholder="Are you a robot?"/>
+			</p>		
+
+			<p style="padding-top: 15px"><span>&nbsp;</span>
+				<input class="submit" type="submit" id="contact_submitted" value="Submit"  />
+			</p>
+         </div>
+        </form>
+	
+      </div>
+    </section>
+    <div id="content_footer"></div>
+    <footer id="footer">
+          <p>Copyright &copy; Felix Dumit - 21203542 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a></p>
+    </footer>
+  </div>
+</body>
+</html>
