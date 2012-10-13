@@ -1,4 +1,12 @@
 CITS4230Ii::Application.routes.draw do
+
+  root :to => 'pages#home'
+
+  match '/mypage', :to => 'pages#mypage'
+  match '/register', :to => 'pages#register'
+  match '/login', :to => 'pages#login'
+  match '/upload', :to => 'pages#upload'
+
   get "pages/home"
 
   get "pages/mypage"

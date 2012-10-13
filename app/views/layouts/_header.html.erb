@@ -3,7 +3,7 @@
                 <div id="logo_text">
                     <!-- class="logo_colour", allows you to change the colour of the text -->
                     <h1>
-                        <a href="index.html">My<span class="logo_colour">Pix</span></a>
+                        <a href="/">My<span class="logo_colour">Pix</span></a>
                     </h1>
                     <h2>
                         Image Uploading and Sharing
@@ -13,17 +13,17 @@
             <nav id="menubar">
                 <ul id="menu">
                     <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-                    <li class=<%= @title == 'home'? "selected" : "" %>>
-                        <%= link_to 'Home', 'home' %>
+                    <li class=<%= @title == 'Home' ? "selected" : "" %>>
+                        <%= link_to 'Home', root_path %>
                     </li>
-                    <li class=<%= @title == 'mypage'? "selected" : "" %>>
-                        <%= link_to 'MyPage', 'mypage' %>
+                    <li class=<%= @title == 'My Page' ? "selected" : "" %>>
+                        <%= link_to 'My Page', mypage_path %>
                     </li>
-                    <li class=<%= @title == 'upload'? "selected" : "" %>>
-                        <%= link_to 'Upload', 'upload' %>
+                    <li class=<%= @title == 'Upload' ? "selected" : "" %>>
+                        <%= link_to 'Upload', upload_path %>
                     </li>
-                    <li class=<%= @title == 'register'? "selected" : "" %>>
-                        <%= link_to 'Register', 'register' %>
+                    <li class=<%= @title == 'Register' ? "selected" : "" %>>
+                        <%= link_to 'Register', register_path %>
                     </li>
                 </ul>
             </nav>
