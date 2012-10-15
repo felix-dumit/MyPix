@@ -1,9 +1,11 @@
 CITS4230Ii::Application.routes.draw do
 
+  get "users/new"
+
   root :to => 'pages#home'
 
   match '/mypage', :to => 'pages#mypage'
-  match '/register', :to => 'pages#register'
+  match '/register', :to => 'users#new'
   match '/login', :to => 'pages#login'
   match '/upload', :to => 'pages#upload'
 
