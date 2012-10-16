@@ -374,3 +374,7 @@ input[type='button'],input[type='file']{
 	color:white;
 	border: 1px solid black;
 }
+
+#notice{
+  color:green;
+}

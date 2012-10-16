@@ -11,7 +11,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-
+<%= debug(params) if Rails.env.development? %>
 <div>
 <body id = "main">
     <div>
@@ -19,6 +19,7 @@
 
         <div id="content_header"></div>
         <section id="site_content">
+                <p id="notice"><%= notice %></p>
                 <%= render 'layouts/sidebar' %>
                 <div id="content">
                     <!-- insert the page content here -->

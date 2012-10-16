@@ -1,12 +1,13 @@
 function checkPasswords() {
-  var password1 = document.getElementById('reg_pw');
-  var password2 = document.getElementById('reg_pw2');
+  var password1 = document.getElementById('user_password');
+  var password2 = document.getElementById('user_password_confirmation');
   if (password1.value != password2.value) {
     password2.setCustomValidity('Passwords do not match');
   } else {
     password2.setCustomValidity('');
   }
 }
+
 
 function checkDate(){
 
@@ -16,9 +17,6 @@ function checkDate(){
 	if(m==-1)
 		date.setCustomValidity('Invalid date');
 	else date.setCustomValidity('');
-
-
-
 }
 
 function createCaptcha(){
@@ -117,4 +115,6 @@ function init(){
 	if(window.location.toString().indexOf('register')>0){
 		createCaptcha();
 	}
+
+	//document.getElementById('user_password_confirmation').oninput = checkPasswords;
 }

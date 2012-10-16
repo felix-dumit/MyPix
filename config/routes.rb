@@ -1,23 +1,14 @@
 CITS4230Ii::Application.routes.draw do
 
-  get "users/new"
 
+  resources :users
   root :to => 'pages#home'
 
+  match '/user/:name', :to => 'users#show'
   match '/mypage', :to => 'pages#mypage'
   match '/register', :to => 'users#new'
   match '/login', :to => 'pages#login'
   match '/upload', :to => 'pages#upload'
-
-  get "pages/home"
-
-  get "pages/mypage"
-
-  get "pages/upload"
-
-  get "pages/register"
-
-  get "pages/login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
