@@ -1,6 +1,5 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 #error_explanation {
   color: #f00;
   ul {
@@ -13,4 +12,10 @@
   @extend .control-group;
   @extend .error;
   color: red;
+ }
+
+.alert{
+}
+.alert-error{
+    color: red;
  }

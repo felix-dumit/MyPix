@@ -2,12 +2,15 @@ CITS4230Ii::Application.routes.draw do
 
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
   root :to => 'pages#home'
 
   match '/user/:name', :to => 'users#show'
   match '/mypage', :to => 'pages#mypage'
   match '/register', :to => 'users#new'
-  match '/login', :to => 'pages#login'
+  match '/login', :to => 'sessions#new'
+  match '/logout', to: 'sessions#destroy'
   match '/upload', :to => 'pages#upload'
 
   # The priority is based upon order of creation:

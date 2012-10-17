@@ -6,9 +6,16 @@
                         My Links
                     </h3>
                     <ul>
+                        <% if signed_in? %>
+                        <li>
+                             <%= link_to "Logout(#{@current_user.name})", logout_path %>
+                        </li>
+                        <% else %>
                         <li>
                            <%= link_to "Login", login_path %>
                         </li>
+                        <% end %>
+
                         <li>
                              <%= link_to "My Profile", '#' %>
                         </li>
@@ -17,9 +24,6 @@
                         </li>
                         <li>
                              <%= link_to "Upload", upload_path %>
-                        </li>
-                        <li>
-                            <a href="#" onclick="alert('Logout succesfull');window.location='home';">Logout</a>
                         </li>
                     </ul>
                 </div>

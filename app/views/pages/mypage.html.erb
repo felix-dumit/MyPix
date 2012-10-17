@@ -1,3 +1,9 @@
 <% provide(:title, 'My Page') %>
-<h1>Pages#mypage</h1>
-<p>Find me in app/views/pages/mypage.html.erb</p>
+
+<% if signed_in? %>
+    <p> You are logged in as :<%= @current_user.name %></p>
+<%else%>
+     <p>You aren't logged in, <%= link_to "Click here to login!", login_path %></p>
+<%end%>
+
+

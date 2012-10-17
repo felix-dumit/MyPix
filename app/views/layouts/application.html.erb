@@ -16,10 +16,12 @@
 <body id = "main">
     <div>
         <%= render 'layouts/header' %>
-
-        <div id="content_header"></div>
+       <div id="content_header"></div>
         <section id="site_content">
-                <p id="notice"><%= notice %></p>
+               <% flash.each do |key, value| %>
+                  <div class="alert alert-<%= key %>"><%= value %></div>
+               <% end %>
+
                 <%= render 'layouts/sidebar' %>
                 <div id="content">
                     <!-- insert the page content here -->
