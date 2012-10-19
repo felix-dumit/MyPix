@@ -16,7 +16,6 @@ class User < ActiveRecord::Base
     attr_accessible :name, :email, :password, :password_confirmation
 
     has_secure_password
-    has_many :images, dependent: :destroy
 
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     VALID_USERNAME_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9_]*$/

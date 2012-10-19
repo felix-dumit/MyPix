@@ -8,6 +8,5 @@
 <div>user has <%=@user.images.count%> images :)</div>
 
 <% @user.images.each do |image| %> 
-Name:<%= image.name %>
-<%= image_tag image.pic.url %>
+ <%= image_tag image.pic.url %>
 <% end %>
