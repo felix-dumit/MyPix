@@ -7,6 +7,15 @@
                     </h3>
                     <ul>
                         <% if signed_in? %>
+                         <li>
+                             <%= link_to "My Profile",edit_user_path(current_user) %>
+                        </li>
+                        <li>
+                             <%= link_to "My Pictures", '#' %>
+                        </li>
+                        <li>
+                             <%= link_to "Upload", upload_path %>
+                        </li>
                         <li>
                              <%= link_to "Logout(#{@current_user.name})", logout_path %>
                         </li>
@@ -16,15 +25,7 @@
                         </li>
                         <% end %>
 
-                        <li>
-                             <%= link_to "My Profile", '#' %>
-                        </li>
-                        <li>
-                             <%= link_to "My Pictures", '#' %>
-                        </li>
-                        <li>
-                             <%= link_to "Upload", upload_path %>
-                        </li>
+
                     </ul>
                 </div>
                 <div class="sidebar_base"></div>
