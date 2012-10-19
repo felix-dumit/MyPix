@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'simplecov'
 
 # Gems used only for assets and not required
 # in production environments by default.
