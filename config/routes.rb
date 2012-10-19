@@ -2,7 +2,7 @@ CITS4230Ii::Application.routes.draw do
 
 
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, :only => [:new, :create, :destroy]
 
   root :to => 'pages#home'
 
