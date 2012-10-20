@@ -4,11 +4,13 @@ CITS4230Ii::Application.routes.draw do
   resources :users
   resources :images
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :friendships
 
   root :to => 'pages#home'
 
   match '/user/:name', :to => 'users#show'
   match '/mypage', :to => 'users#show'
+  match '/pictures/:id', :to => 'users#pictures', :as => :pictures
   match '/register', :to => 'users#new'
   match '/login', :to => 'sessions#new'
   match '/logout', :to => 'sessions#destroy'

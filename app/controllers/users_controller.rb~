@@ -48,6 +48,9 @@ class UsersController < ApplicationController
             end
         end
 
+        @images = @user.images
+        @groups = @images.all.map {|i| i.group}.uniq
+
         # respond_to do |format|
         #     format.html # show.html.erb
         #     format.json { render json: @user }

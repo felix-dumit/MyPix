@@ -5,7 +5,7 @@
 ( you ) 
 <% elsif (current_user.friends.include? user) and user.friends.include? current_user%>
 (friends)
-<% elsif current_user.friends.include? user%>
+<% elsif (current_user.friends.include? user%>
 (added as friend)
 <% else %>
 <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>

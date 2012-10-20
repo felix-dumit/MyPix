@@ -8,8 +8,7 @@
 
 <% friend_count = 0 %>
 <% @user.friends.each do |friend| %>
-<% if friend.friends.include? @user %>
-<% friend_count = friend_count + 1 %>
+<% friend_count++ if friend.friends.include? @user %>
 <% end %>
 <% end %>
 

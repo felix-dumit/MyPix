@@ -6,11 +6,11 @@
         <ul class = "imglist">
         <% @images.each do |image| %>
             <li>
-	<% if !image.private %>
+	<% if image.private %>
 	 <%= link_to image.user.name, user_path(image.user) %>
             <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[recent]"%>
 	<% end%>            
-	</li>
+</li>
         <%end%>
         </ul>
     </div>
