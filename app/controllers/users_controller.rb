@@ -22,19 +22,27 @@ class UsersController < ApplicationController
         if params[:name]
             @user = User.find_by_name(params[:name])
         else
-            @user = User.find(params[:id])
+            if params[:id]
+                @user = User.find(params[:id])
+            else
+                signed_in_user
+                @user = current_user
+            end
         end
 
+        @images = @user.images
+        @groups = @images.all.map {|i| i.group}.uniq
 
-        respond_to do |format|
-            format.html # show.html.erb
-            format.json { render json: @user }
-        end
+        # respond_to do |format|
+        #     format.html # show.html.erb
+        #     format.json { render json: @user }
+        # end
     end
 
     # GET /users/new
     # GET /users/new.json
     def new
+        sign_out
         @user = User.new
 
         respond_to do |format|

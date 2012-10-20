@@ -5,9 +5,28 @@
   <%= @user.name %>
 </h1>
 <h2> <%= @user.email %> </h2>
-<div>user has <%=@user.images.count%> images :)</div>
+<div>user has <%=@images.count%> images :)</div>
 
-<% @user.images.each do |image| %> 
-Name:<%= image.name %>
-<%= image_tag image.pic.url %>
-<% end %>
+<div id = "imgwrap">
+    <% @groups.each do |group| %>
+        <hr />
+    <div class= "imgblock" id= <%= "#{group}block" %> >
+        <h2> <%= group %> <span> -</span></h2>
+        <ul class = "imglist">
+        <% @images.where(:group => group).each do |image| %>
+            <li>
+            <br />
+            Name:<%= image.name %><br/>
+            Group: <%= image.group %><br />
+            Private: <%image.private %><br />
+            <%= link_to 'Show', image %>
+            <%= link_to 'Edit', edit_image_path(image) %>
+            <%= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete %>
+
+            <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[#{group}]"%>
+            </li>
+        <%end%>
+        </ul>
+    </div>
+    <% end %>
+</div>

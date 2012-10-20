@@ -5,7 +5,7 @@ class Image < ActiveRecord::Base
     validates :name, :presence => true
     validates :user_id, :presence => true
     has_attached_file :pic, :styles =>
-    { :medium => "300x300>", :thumb => "100x100>" }
+    {:large => "500x500", :medium => "300x300>", :small => "200x200", :thumb => "100x100>" }
 
     belongs_to :user
 

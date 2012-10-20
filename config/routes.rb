@@ -8,7 +8,7 @@ CITS4230Ii::Application.routes.draw do
   root :to => 'pages#home'
 
   match '/user/:name', :to => 'users#show'
-  match '/mypage', :to => 'pages#mypage'
+  match '/mypage', :to => 'users#show'
   match '/register', :to => 'users#new'
   match '/login', :to => 'sessions#new'
   match '/logout', :to => 'sessions#destroy'
