@@ -1,15 +1,14 @@
 
-  # FOR THE PICTURES 
+  # FOR THE PICTURES
   # Will show the real size picture
- NAME? <%= @image.name%>
-  <%= image_tag @image.pic.url %>
+ NAME: <br /> <%= @image.name%>
+ #REAL:<%= image_tag @image.pic.url %>
   <br/>
-  # Will the style MEDIUM configured before 
- # in your model
- <%= image_tag @image.pic.url(:medium) %>
+ #LARGE:<%= image_tag @image.pic.url(:large) %>
  <br/>
- # Will the style THUMB configured before 
- # in your model
- <%= image_tag @image.pic.url(:thumb) %>
+#MEDIUM:<%= image_tag @image.pic.url(:medium) %>
  <br/>
-
+#SMALL:<%= image_tag @image.pic.url(:small) %>
+ <br/>
+#THUMB:<%= image_tag @image.pic.url(:thumb) %>
+ <br/>

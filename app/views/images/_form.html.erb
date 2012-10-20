@@ -1,0 +1,17 @@
+ <%= form_for @image do |f| %>
+  <div class="form_settings">
+
+      <p><%= f.label :name%></p>
+      <p><%= f.text_field :name, :required => true, :placeholder => "enter username" %></p>
+      <p><%= f.label :group%></p>
+      <p><%= f.text_field :group, :placeholder => "enter group" %></p>
+      <p><%= f.label :private%></p>
+      <p><%= f.check_box :private %></p>
+
+  <p>
+     <b> Picture </b><br/>
+     <%= f.file_field :pic %>
+   </p>
+<p><%= f.submit "Submit", class: "submit" %></p>
+</div>
+<% end %>
