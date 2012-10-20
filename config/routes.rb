@@ -8,7 +8,6 @@ CITS4230Ii::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  match '/user/:name', :to => 'users#show'
   match '/mypage', :to => 'users#show'
   match '/pictures/:id', :to => 'users#pictures', :as => :pictures
   match '/register', :to => 'users#new'

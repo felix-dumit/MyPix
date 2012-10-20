@@ -10,7 +10,7 @@
 
   <p>
      <b> Picture </b><br/>
-     <%= f.file_field :pic %>
+     <%= f.file_field :pic, :required => true, :accept => "image/*" %>
    </p>
 <p><%= f.submit "Submit", class: "submit" %></p>
 </div>

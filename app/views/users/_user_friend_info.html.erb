@@ -1,0 +1,36 @@
+<h2> Your Friends </h2>
+You have <%= pluralize(friend_count(current_user), 'friend') %>
+<ul>
+<% current_user.friends.each do |friend| %>
+<% if friends? friend %>
+<br /><li><%= render friend %>
+(<%= link_to "remove", current_user.friendships.find_by_friend_id(friend.id), :method => :delete, :confirm => "Are you sure?" %>)
+</li>
+<% end %>
+<% end %>
+</ul>
+
+<h2> Your Received Requests </h2>
+You have <%= pluralize(received_requests(current_user), 'friend') %> pending
+<ul>
+<% current_user.inverse_friendships.each do |inverse_friendship| %>
+<% unless friends? inverse_friendship.user %>
+<br /><li><%= render inverse_friendship.user %>
+(<%= link_to "decline", inverse_friendship, :method => :delete %>)
+(<%= link_to "accept", friendships_path(:friend_id => inverse_friendship.user.id), :method => :post %>)
+</li>
+<% end %>
+<% end %>
+</ul>
+
+<h2> Your Sent Requests </h2>
+You have sent <%= pluralize(sent_requests(current_user), 'request') %>
+<ul>
+<% current_user.friendships.each do |friendship| %>
+<% unless friends? friendship.friend %>
+<br /><li><%= render friendship.friend %>
+(<%= link_to "remove", friendship, :method => :delete, :confirm => "Are you sure?" %>)
+</li>
+<% end %>
+<% end %>
+</ul>

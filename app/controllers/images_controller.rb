@@ -12,7 +12,7 @@ class ImagesController < ApplicationController
         #  @image = Image.new(params[:image])
         @image = @current_user.images.new(params[:image])
         if @image.save
-            redirect_to  @current_user
+            redirect_to  pictures_path(@current_user)
         else
             render action: "new"
             flash[:success] = @image.errors
@@ -35,7 +35,7 @@ class ImagesController < ApplicationController
 
         respond_to do |format|
             if @image.update_attributes(params[:image])
-                format.html { redirect_to @current_user}
+                format.html { redirect_to pictures_path(@current_user)}
                 format.json { head :no_content }
                 flash[:success] = "Image updated"
 

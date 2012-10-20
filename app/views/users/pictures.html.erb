@@ -13,21 +13,22 @@
         <h2> <%= group %> <span> -</span></h2>
         <ul class = "imglist">
         <% @images.where(:group => group).each do |image| %>
-	    <% if current_user? @user or !image.private or @user.friends.include? current_user %>            
+	    <% if current_user? @user or !image.private or @user.friends.include? current_user %>
 		<li>
             <br />
 
-            Name:<%= image.name %><br/>
-	    Uploaded at: <%= image.created_at %><br />
+            <p>Name:<%= image.name %></p>
+	        <p>Uploaded at: <%= image.created_at %></p>
 
             <% if current_user? @user %>
-            Private: <%=image.private %><br />
+            <p>Private: <%=image.private %></p>
             <%= link_to 'Edit', edit_image_path(image) %>
             <%= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete %>
             <% end %>
 
             <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[#{group}]"%>
             </li>
+            <hr />
 	   <% end %>
         <%end%>
         </ul>

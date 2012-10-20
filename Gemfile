@@ -12,8 +12,8 @@ gem 'simplecov'
 
 gem 'will_paginate', '3.0.3'
 gem 'paperclip'
-
-#gem 'rmagick'
+gem 'friendly_id'
+gem 'rmagick'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,7 +22,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  #gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end

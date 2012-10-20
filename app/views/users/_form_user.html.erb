@@ -1,0 +1,21 @@
+    <%= form_for(@user) do |f| %>
+    <div class="form_settings">
+    <%= render 'shared/error_messages' %>
+
+
+      <p><%= f.label :name%></p>
+      <p><%= f.text_field :name, :required => true, :placeholder => "enter username" %></p>
+
+      <p><%= f.label :email %></p>
+      <p><%= f.email_field :email, :required => true, :placeholder=> "enter email@example.com"%></p>
+
+      <p><%= f.label :password%></p>
+      <p><%= f.password_field :password, :required => true, :placeholder => "enter password", :pattern => '\S{6,}' %></p>
+
+      <p><%= f.label :password_confirmation, "Confirmation" %></p>
+      <p><%= f.password_field :password_confirmation, :required => true,
+       :placeholder => "confirm password", :oninput => "checkPasswords();" %></p>
+
+      <p><%= f.submit "Submit", class: "submit" %></p>
+    </div>
+    <% end %>
