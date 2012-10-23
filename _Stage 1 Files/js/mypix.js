@@ -1,3 +1,4 @@
+
 function allowDrop(ev) {
 	if(!ev){
 		ev = window.event;
@@ -17,7 +18,7 @@ function drag(ev) {
 	//dragTrash(ev);
 }
 
-
+/*
 function dragTrash(ev) {
 	if(!ev){
 		ev = window.event;
@@ -85,7 +86,7 @@ function drop(ev) {
 		titlenode.nextElementSibling.appendChild(node.parentNode);
 	}
 }
-
+*/
 function expandOrCollapse(ev) {
 	if(!ev){
 		ev = window.event;
@@ -97,7 +98,7 @@ function expandOrCollapse(ev) {
 	x.innerHTML = x.innerHTML == ' -' ? ' +' : ' -';
 
 }
-
+/*
 function createImageBlock(ev) {
 	if(!ev){
 		ev = window.event;
@@ -125,7 +126,7 @@ function createImageBlock(ev) {
 	imgblock.appendChild(document.createElement('hr'));
 	document.getElementById('imgwrap').appendChild(imgblock);
 }
-
+*/
 function handleDragStart(ev) {
 	if(!ev){
 		ev = window.event;
