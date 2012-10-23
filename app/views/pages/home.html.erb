@@ -1,4 +1,4 @@
-<h1>Welcome <%= @current_user.name if @current_user%> </h1>
+<h1>Welcome <%= @current_user.name if signed_in?%> </h1>
 
 
 <div class= "imgblock" id= "recentblock"> >
@@ -9,7 +9,7 @@
 	<% if !image.private %>
 	 <%= link_to image.user.name, user_path(image.user) %>
             <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[recent]"%>
-	<% end%>            
+	<% end%>
 	</li>
         <%end%>
         </ul>
