@@ -9,8 +9,10 @@
       <p><%= f.check_box :private %></p>
 
   <p>
+    <% if yield(:form_type) == 'new' %>
      <b> Picture </b><br/>
      <%= f.file_field :pic, :required => true, :accept => "image/*" %>
+     <% end %>
    </p>
 <p><%= f.submit "Submit", class: "submit" %></p>
 </div>
