@@ -3,10 +3,10 @@ class FriendshipsController < ApplicationController
 		@friendship = current_user.friendships.new(:friend_id => params[:friend_id])
 		if @friendship.save
 			flash[:notice] = "Friendship request sent :)"
-			redirect_back_or current_user
+			redirect_back_or mypage_path
 		else
 			flash[:notice] = "Error sending the request :("
-			redirect_back_or current_user
+			redirect_back_or mypage_path
 		end
 	end
 
@@ -23,7 +23,7 @@ class FriendshipsController < ApplicationController
 
 
 		flash[:notice] = "Removed Friendship"
-		redirect_to current_user
+		redirect_to mypage_path
 	end
 end
 

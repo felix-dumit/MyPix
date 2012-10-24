@@ -8,13 +8,13 @@
                     <ul>
                         <% if signed_in? %>
                          <li>
-                             <%= link_to "My Account",user_path(current_user) %>
+                             <%= link_to "My Account",mypage_path %>
                         </li>
                         <li>
                              <%= link_to "Edit Profile",edit_user_path(current_user) %>
                         </li>
                         <li>
-                             <%= link_to "My Pictures", pictures_path(current_user) %>
+                             <%= link_to "My Pictures", mypictures_path %>
                         </li>
                         <li>
                              <%= link_to "Upload", upload_path %>

@@ -12,7 +12,7 @@ class ImagesController < ApplicationController
         #  @image = Image.new(params[:image])
         @image = @current_user.images.new(params[:image])
         if @image.save
-            redirect_to  pictures_path(@current_user)
+            redirect_to  mypictures_path
         else
             render action: "new"
             flash[:success] = @image.errors
@@ -28,14 +28,14 @@ class ImagesController < ApplicationController
         @image = Image.find(params[:id])
     end
 
-     # PUT /users/1
+    # PUT /users/1
     # PUT /users/1.json
     def update
         @image = Image.find(params[:id])
 
         respond_to do |format|
             if @image.update_attributes(params[:image])
-                format.html { redirect_to pictures_path(@current_user)}
+                format.html { redirect_to mypictures_path}
                 format.json { head :no_content }
                 flash[:success] = "Image updated"
 
@@ -53,7 +53,7 @@ class ImagesController < ApplicationController
         @image.destroy
 
         respond_to do |format|
-            format.html { redirect_to mypage_url }
+            format.html { redirect_to mypictures_path }
             format.json { head :no_content }
         end
     end
