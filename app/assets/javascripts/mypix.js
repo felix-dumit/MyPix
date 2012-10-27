@@ -17,7 +17,7 @@ function drag(ev) {
 	//dragTrash(ev);
 }
 
-
+/*
 function dragTrash(ev) {
 	if(!ev){
 		ev = window.event;
@@ -53,7 +53,7 @@ function dropTrash(ev) {
 	var node = document.getElementById(data).parentNode.parentNode;
 	node.parentNode.removeChild(node);
 }
-
+*/
 function dragEnd(ev) {
 	if(!ev){
 		ev = window.event;
