@@ -2,9 +2,10 @@
 
 <h1>
   <%= gravatar_for @user %>
-  <%= @user.name %>
+  <%= link_to @user.name, @user %>
 </h1>
 <div>user has <%=pluralize(@images.count, 'image')%>, <%= pluralize(@images.where(:private => true).count, 'image is', 'images are') %> private :D</div>
+
 
 <div id = "imgwrap">
     <% @groups.each do |group| %>
@@ -22,8 +23,9 @@
 
             <% if current_user? @user %>
             <p>Private: <%=image.private %></p>
+            <%= link_to 'View Sizes', image %>
             <%= link_to 'Edit', edit_image_path(image) %>
-            <%= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete %>
+            <%= link_to 'Delete', image, confirm: 'Are you sure?', method: :delete %>
             <% end %>
 
             <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[#{group}]"%>

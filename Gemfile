@@ -13,16 +13,20 @@ gem 'simplecov'
 gem 'will_paginate', '3.0.3'
 gem 'paperclip'
 gem 'friendly_id'
+
+#comment for linux, uncomment for windows
 gem 'rmagick'
+
+
+#uncomment for linux, comment for windows
+#gem 'therubyracer'
+#gem 'execjs'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  #gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end

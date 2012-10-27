@@ -16,8 +16,8 @@ class UsersController < ApplicationController
     end
 
 
-  def pictures
-	 if params[:name]
+    def pictures
+        if params[:name]
             @user = User.find_by_name(params[:name])
         else
             if params[:id]
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
         @images = @user.images
         @groups = @images.all.map {|i| i.group}.uniq
 
-  end
+    end
 
     # GET /users/1
     # GET /users/1.json
@@ -119,19 +119,19 @@ class UsersController < ApplicationController
         end
     end
 
-        def signed_in_user
-            unless signed_in?
-                store_location
-                redirect_to login_url, notice: "Please sign in."
-            end
+    def signed_in_user
+        unless signed_in?
+            store_location
+            redirect_to login_url, notice: "Please sign in."
         end
-        def correct_user
-            @user = User.find(params[:id])
-            redirect_to(root_path) unless current_user?(@user)
-        end
+    end
+    def correct_user
+        @user = User.find(params[:id])
+        redirect_to(root_path) unless current_user?(@user)
+    end
 
     def add_friend
-	store_location
+        store_location
     end
 
     def remove_friend
