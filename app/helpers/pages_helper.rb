@@ -10,4 +10,13 @@ module PagesHelper
             false
         end
     end
+
+    def getName user
+        begin
+            user.name
+        rescue
+            "--"
+        end
+    end
+
 end

@@ -16,13 +16,13 @@
                     <li class=<%= yield(:title) == '' ? "selected" : "" %>>
                         <%= link_to 'Home', root_path %>
                     </li>
-                    <li class=<%= yield(:title) == 'My Page' ? "selected" : "" %>>
+                    <li class=<%= yield(:title) == getName(@user) ? "selected" : "" %>>
                         <%= link_to 'My Page', mypage_path %>
                     </li>
                     <li class=<%= yield(:title) == 'Upload' ? "selected" : "" %>>
                         <%= link_to 'Upload', upload_path %>
                     </li>
-                    <li class=<%= yield(:title) == 'All Users' ? "selected" : "" %>>
+                    <li class=<%= yield(:title) == 'All users' ? "selected" : "" %>>
                         <%= link_to "Users", users_path %>
                     </li>
                     <li class=<%= yield(:title) == 'Register' ? "selected" : "" %>>
