@@ -14,4 +14,14 @@
         </ul>
     </div>
 
-
+    <div id="checkOnline">
+    <h2>Status of website (heroku version is preferred) </h2>
+<% @urls.each do |url| %>
+    <% if working_url? url %>
+    <p style="color:green"><%= "#{url} is online"%></p>
+    <%else%>
+    <p style="color:red"><%= "#{url} is offline"%></p>
+    <%end%>
+</p>
+<% end %>
+</div>

@@ -5,7 +5,10 @@ module PagesHelper
     def working_url?(url)
         begin
             request = Net::HTTP.get_response(URI.parse(url)) # returns an Net::HTTPResponse Object
-            request.code.to_f < 400
+            if request.code.to_f < 400
+                return true
+            else return false
+            end
         rescue
             false
         end
