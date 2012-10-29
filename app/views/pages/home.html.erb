@@ -15,13 +15,11 @@
     </div>
 
     <div id="checkOnline">
-    <h2>Status of website (heroku version is preferred) </h2>
-<% @urls.each do |url| %>
-    <% if working_url? url %>
-    <p style="color:green"><%= "#{url} is online"%></p>
-    <%else%>
-    <p style="color:red"><%= "#{url} is offline"%></p>
-    <%end%>
-</p>
-<% end %>
+        <h2>Website is online at </h2>
+        <ul>
+            <li> http://mypix.herokuapps.com (stable, fully functional) </li>
+            <li> http://cits4230c.csse.uwa.edu.au/mypix (unstable) </li>
+        </ul>
+
+
 </div>
