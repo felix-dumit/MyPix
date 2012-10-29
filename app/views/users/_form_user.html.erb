@@ -15,7 +15,7 @@
       <p><%= f.label :password_confirmation, "Confirmation" %></p>
       <p><%= f.password_field :password_confirmation, :required => true,
        :placeholder => "confirm password", :oninput => "checkPasswords();" %></p><br/>
-
+      <%if yield(:form_type) ==  'edit' %>
       <hr/><%= gravatar_for @user %>
       <% if has_avatar? @user %>
         <%= link_to "Remove uploaded image (use gravatar)", {:controller => :users,
@@ -24,6 +24,7 @@
       <a href="http://gravatar.com/emails">change gravatar</a>
       <p><%= f.label :avatar, "Or upload image" %></p>
       <p><%= f.file_field :avatar, :accept => "image/*", :placeholder => "select avatar" %></p>
+      <% end %>
       <% end %>
 
       <hr/><br/>
