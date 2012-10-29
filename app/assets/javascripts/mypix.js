@@ -137,10 +137,10 @@ function initImgs() {
 	imgblocks = document.getElementsByClassName('imgblock');
 	var i = 0;
 	while (imgblocks[i]) {
-		imgblocks[i].ondrop = drop;
-		imgblocks[i].ondragover = allowDrop;
+		//imgblocks[i].ondrop = drop;
+		//imgblocks[i].ondragover = allowDrop;
 		var h2 = imgblocks[i].getElementsByTagName('span')[0];
-		h2.onclick = expandOrCollapse;
+		h2.onclick = expandOrCollapse;/*
 		var j = 0;
 		var imgs = imgblocks[i].getElementsByTagName('img');
 		while (imgs[j]) {
@@ -154,7 +154,7 @@ function initImgs() {
 			imgs[j].onmousedown = dragTrash;
 			imgs[j].onmouseup = dragEnd;
 			j++;
-		}
+		}*/
 		console.log(i);
 		i++;
 
