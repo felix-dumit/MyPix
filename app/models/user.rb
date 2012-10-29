@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     extend FriendlyId
     friendly_id :name
 
-    attr_accessible :name, :email, :password, :password_confirmation
+    attr_accessible :name, :email, :password, :password_confirmation, :avatar
 
     has_secure_password
     has_many :images, dependent: :destroy
@@ -24,6 +24,9 @@ class User < ActiveRecord::Base
     has_many :friends, :through => :friendships
     has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
     has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+
+    has_attached_file :avatar, :styles =>{:thumb => "50x50>"}
+
 
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     VALID_USERNAME_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9_.-]*$/

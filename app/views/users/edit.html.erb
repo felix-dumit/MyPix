@@ -1,10 +1,6 @@
-<% provide(:title, 'Edit Profile') %>
+<% provide(:title, @user.name) %>
 
   <%= render 'form_user' %>
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
-    <br />
-    <hr />
-    <br />
+    <br/> <br/>
     <p><%= link_to "Delete Account", @user, method: :delete,
                                   data: { confirm: "You sure?" } %></p>

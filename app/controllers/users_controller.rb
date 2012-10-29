@@ -137,4 +137,15 @@ class UsersController < ApplicationController
     def remove_friend
     end
 
+    def remove_avatar
+        @user = User.find(params[:id])
+        @user.avatar.destroy
+        @user.save( :validate => false )
+        sign_in @user
+        respond_to do |format|
+            format.html { redirect_to edit_user_path(@user) }
+            format.json { head :no_content }
+        end
+    end
+
 end

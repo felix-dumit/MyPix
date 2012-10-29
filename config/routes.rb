@@ -15,6 +15,7 @@ CITS4230Ii::Application.routes.draw do
   match '/login', :to => 'sessions#new'
   match '/logout', :to => 'sessions#destroy'
   match '/upload', :to => 'images#new'
+  match '/user/remove_avatar', :to => 'users#remove_avatar'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
