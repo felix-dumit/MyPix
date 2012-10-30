@@ -89,7 +89,7 @@ function addImage(img){
 	for( var i in mimg){
 		name=mimg[i];
 	}
-	name='assets/user/'+name;
+	name='CITS4230.2/assets/user/'+name;
 
 	var newImg = document.createElement('img');
 	newImg.setAttribute('src',name);

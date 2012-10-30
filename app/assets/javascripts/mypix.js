@@ -25,7 +25,7 @@ function dragTrash(ev) {
 
 	if (document.getElementById('trash') == null) {
 		var img = document.createElement('img');
-		img.setAttribute('src', 'assets/trash.png');
+		img.setAttribute('src', 'CITS4230.2/assets/trash.png');
 		img.setAttribute('id', 'trash');
 		img.setAttribute('width', '50');
 		img.setAttribute('style', 'position: relative; left:-5px');
