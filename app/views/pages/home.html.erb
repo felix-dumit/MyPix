@@ -6,7 +6,7 @@
         <% @images.each do |image| %>
             <li>
 	       <% if !image.private %>
-	       <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[recent]"%>
+	       <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), '/mypix'+image.pic.url(:large),  class: "lightbox[recent]"%>
            by <%= link_to image.user.name, user_path(image.user) %> at <%= image.created_at%>
 	       <% end%>
 	       </li><br/>
