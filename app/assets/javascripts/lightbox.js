@@ -48,8 +48,8 @@ lightbox = new Lightbox options
   LightboxOptions = (function() {
 
     function LightboxOptions() {
-      this.fileLoadingImage = '/CITS4230.2/assets/loading.gif';
-      this.fileCloseImage = '/CITS4230.2/assets/close.png';
+      this.fileLoadingImage = '/mypix/assets/loading.gif';
+      this.fileCloseImage = '/mypix/assets/close.png';
       this.resizeDuration = 700;
       this.fadeDuration = 500;
       this.labelImage = "Image";

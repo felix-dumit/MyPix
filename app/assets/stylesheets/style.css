@@ -99,7 +99,7 @@ ol li
   margin-right: auto;}
 
 #header
-{ background: #323534 url(/CITS4230.2/assets/back.png) repeat-x;
+{ background: #323534 url(/mypix/assets/back.png) repeat-x;
   height: 177px;}
 
 #logo
@@ -149,7 +149,7 @@ ul#menu li
   padding: 0 0 0 9px;
   list-style: none;
   margin: 1px 2px 0 0;
-  background: #5A5A5A url(/CITS4230.2/assets/tab.png) no-repeat 0 0;}
+  background: #5A5A5A url(/mypix/assets/tab.png) no-repeat 0 0;}
 
 ul#menu li a
 { font: normal 100% 'trebuchet ms', sans-serif;
@@ -160,7 +160,7 @@ ul#menu li a
   text-align: center;
   color: #FFF;
   text-decoration: none;
-  background: #5A5A5A url(/CITS4230.2/assets/tab.png) no-repeat 100% 0;}
+  background: #5A5A5A url(/mypix/assets/tab.png) no-repeat 100% 0;}
 
 ul#menu li.selected a
 { height: 20px;
@@ -168,10 +168,10 @@ ul#menu li.selected a
 
 ul#menu li.selected
 { margin: 1px 2px 0 0;
-  background: #00C6F0 url(/CITS4230.2/assets/tab_selected.png) no-repeat 0 0;}
+  background: #00C6F0 url(/mypix/assets/tab_selected.png) no-repeat 0 0;}
 
 ul#menu li.selected a, ul#menu li.selected a:hover
-{ background: #00C6F0 url(/CITS4230.2/assets/tab_selected.png) no-repeat 100% 0;
+{ background: #00C6F0 url(/mypix/assets/tab_selected.png) no-repeat 100% 0;
   color: #FFF;}
 
 ul#menu li a:hover
@@ -190,12 +190,12 @@ ul#menu li a:hover
 .sidebar_top
 { width: 222px;
   height: 14px;
-  background: transparent url(/CITS4230.2/assets/side_top.png) no-repeat;}
+  background: transparent url(/mypix/assets/side_top.png) no-repeat;}
 
 .sidebar_base
 { width: 222px;
   height: 14px;
-  background: url(/CITS4230.2/assets/side_base.png) no-repeat;}
+  background: url(/mypix/assets/side_base.png) no-repeat;}
 
 .sidebar
 { float: right;
@@ -204,7 +204,7 @@ ul#menu li a:hover
   margin: 0 0 16px 0;}
 
 .sidebar_item
-{ background: url(/CITS4230.2/assets/side_back.png) repeat-y;
+{ background: url(/mypix/assets/side_back.png) repeat-y;
   padding: 0 15px;
   width: 192px;}
 
@@ -222,7 +222,7 @@ ul#menu li a:hover
 
  ul li{
   list-style-type: none;
-  background: url(/CITS4230.2/assets/bullet.png) no-repeat;
+  background: url(/mypix/assets/bullet.png) no-repeat;
  }
 
 #content ul
@@ -241,7 +241,7 @@ ul#menu li a:hover
   height: 80px;
   padding: 28px 0 5px 0;
   text-align: center;
-  background: #3B3939 url(/CITS4230.2/assets/footer.png) repeat-x;
+  background: #3B3939 url(/mypix/assets/footer.png) repeat-x;
   color: #A8AA94;}
 
 #footer p
@@ -333,12 +333,12 @@ table tr td
 
 
 input[required]:invalid:focus, input:focus:invalid:focus {
-			background-image: url(/CITS4230.2/assets/exclamation.png);
+			background-image: url(/mypix/assets/exclamation.png);
 			background-position: 280px top;
 			background-repeat: no-repeat;
 }
 input[required]:valid:focus {
-			background-image: url(/CITS4230.2/assets/check.png);
+			background-image: url(/mypix/assets/check.png);
 			background-position: right top;
 			background-repeat: no-repeat;
 }

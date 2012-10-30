@@ -15,17 +15,12 @@ gem 'paperclip'
 gem 'friendly_id'
 
 #comment for linux, uncomment for windows
-gem 'rmagick'
+#gem 'rmagick'
 
 
 #uncomment for linux, comment for windows
-#gem 'therubyracer'
-#gem 'execjs'
-
-
-group :production, :staging do
-  gem "pg"
-end
+gem 'therubyracer'
+gem 'execjs'
 
 group :development, :test do
   gem "sqlite3-ruby", :require => "sqlite3"
