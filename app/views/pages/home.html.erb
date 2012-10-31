@@ -7,7 +7,7 @@
             <li>
 	       <% if !image.private %>
 	       <%= link_to image_tag(image.pic.url(:small), :draggable => "true"), image.pic.url(:large),  class: "lightbox[recent]"%>
-           by <%= link_to image.user.name, user_path(image.user) %> at <%= image.created_at%>
+           uploaded by <%= link_to image.user.name, user_path(image.user) %> <%= time_ago_in_words(image.created_at)%> ago
 	       <% end%>
 	       </li><br/>
         <%end%>
