@@ -5,6 +5,8 @@
 <%end%>
 
 <h2><%= "#{@user.name}'s friends" %></h2>
+<ul>
 <% @user.friends.each do |friend| %>
-    <%= render friend %>
+    <li><%= render friend %></li>
 <% end %>
+</ul>
